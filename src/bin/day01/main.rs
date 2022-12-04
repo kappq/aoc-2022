@@ -1,9 +1,7 @@
-use std::fs;
-
 use itertools::Itertools;
 
 fn main() {
-    let contents = fs::read_to_string("src/bin/day01/input.txt").expect("file not found");
+    let contents = include_str!("input.txt");
 
     let calories = contents.split("\n\n").map(|inventory| {
         inventory

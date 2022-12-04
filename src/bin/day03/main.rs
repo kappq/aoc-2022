@@ -1,9 +1,7 @@
-use std::fs;
-
 use itertools::Itertools;
 
 fn main() {
-    let contents = fs::read_to_string("src/bin/day03/input.txt").expect("file not found");
+    let contents = include_str!("input.txt");
 
     let first_star = contents
         .lines()

@@ -1,4 +1,4 @@
-use std::{fs, str::FromStr};
+use std::str::FromStr;
 
 #[derive(Clone, Copy)]
 enum Shape {
@@ -85,7 +85,7 @@ fn second_strategy(line: &str) -> u32 {
 }
 
 fn main() {
-    let contents = fs::read_to_string("src/bin/day02/input.txt").expect("file not found");
+    let contents = include_str!("input.txt");
 
     let first_star = contents.lines().map(first_strategy).sum::<u32>();
     let second_star = contents.lines().map(second_strategy).sum::<u32>();
