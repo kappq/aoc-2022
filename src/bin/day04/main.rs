@@ -25,7 +25,7 @@ fn main() {
     let first_star = contents
         .lines()
         .filter(|assignment| {
-            let (first_range, second_range) = get_ranges(&assignment);
+            let (first_range, second_range) = get_ranges(assignment);
 
             second_range.start() >= first_range.start() && second_range.end() <= first_range.end()
                 || first_range.start() >= second_range.start()
@@ -36,7 +36,7 @@ fn main() {
     let second_star = contents
         .lines()
         .filter(|assignment| {
-            let (first_range, second_range) = get_ranges(&assignment);
+            let (first_range, second_range) = get_ranges(assignment);
 
             for n in first_range {
                 if second_range.contains(&n) {
