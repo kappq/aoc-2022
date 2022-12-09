@@ -30,7 +30,7 @@ fn crate_mover_9001(mut stacks: [Vec<char>; 9], procedure: &str) {
         for _ in 0..n_crates {
             current_crates.insert(0, stacks[from_stack - 1].pop().unwrap());
         }
-        stacks[to_stack - 1].append(& mut current_crates);
+        stacks[to_stack - 1].append(&mut current_crates);
     }
 
     let top_crates = stacks.iter().map(|stack| stack.last().unwrap()).join("");
